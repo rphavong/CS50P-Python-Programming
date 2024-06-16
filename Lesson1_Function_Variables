@@ -1,1 +1,204 @@
+## From 'hello.py'
+# # Defining variables
+# def hello(to):
+#     print("hello,", to)
 
+# # Ask user for their name
+# name = input("What's your name? ")
+
+# hello(name)
+
+
+# # Can assign defaults
+# def hello(to="world"):
+#     print("hello,", to)
+
+# hello()
+# # Ask user for their name
+# name = input("What's your name? ")
+
+# hello(name)
+
+
+# How to properly code so that you do not need to keep adding more code above, instead of below
+def main():
+    name = input("What's your name? ")
+    hello(name)
+
+def hello(to="world"):
+    print("hello,", to)
+
+main()
+
+
+
+
+
+### from 'calculator.py'
+# ## INTEGERS (int)
+# x = input("What's x? ")
+# y = input("What's y? ")
+
+# z = int(x) + int(y) # you need to identify x and y as integers
+
+# print(z)
+
+
+# ## Another better approach
+# x = int(input("What's x? "))
+# y = int(input("What's y? "))
+
+# print(x + y)
+
+
+# ## Float: Number with a decimal point
+# x = float(input("What's x? "))
+# y = float(input("What's y? "))
+
+# print(x + y)
+
+
+# ## Floats + Rounding numbers
+# x = float(input("What's x? "))
+# y = float(input("What's y? "))
+
+# z = round(x + y)
+
+# print(z)
+
+
+# ## Specify commas within triplets of digits such as 1,000 instead of default 1000.
+# x = float(input("What's x? "))
+# y = float(input("What's y? "))
+
+# z = round(x + y)
+
+# print(f"{z:,}") # note this is a format string, so that python doesn't simply print out 'z'
+# # by adding the ':,' within the format string this will add the ,
+
+
+# ## Using division
+# x = float(input("What's x? "))
+# y = float(input("What's y? "))
+
+# z = round(x / y, 2) # the 2 specifies where to round!
+
+# print(z)
+
+
+
+# ## Another approach to the above
+# x = float(input("What's x? "))
+# y = float(input("What's y? "))
+
+# z = x / y
+
+# print(f"{z:.2f}") # specfy how many digits you want to print! So this will print to 2 decimals
+
+
+# ## Defining and using return function
+# def main():
+#     x = int(input("What's x? "))
+#     print("x squared is", square(x))
+
+
+# ## Adding a square root
+# def square(n):
+#     return n * n
+
+# main()
+
+
+# ## Similar to the above you can use '**' to use as the power of
+# def main():
+#     x = int(input("What's x? "))
+#     print("x squared is", square(x))
+
+
+# ## Adding a square root
+# def square(n):
+#     return n ** 2 
+
+# main()
+
+
+
+## Additionally, you can use the function pow to also use as power of
+def main():
+    x = int(input("What's x? "))
+    print("x squared is", square(x))
+
+
+## Adding a square root
+def square(n):
+    return pow(n, 2)
+
+main()
+
+
+
+### From 'function_variables.py'
+# input("What's your name? ")
+# print("hello, Robby")
+
+# # Variables: Ask user for their name
+# name = input("What's your name? ") # name is the variable. equal is the 'assign' function
+
+# # Say hello to user
+# print("hello,") 
+# print(name)
+
+# Comments and psuedocode are correlated because you can add several comments so that you can later include actual code
+# You can also use ' """ ' comment '"""" '
+
+
+# # Variables: Ask user for their name
+# name = input("What's your name? ") # name is the variable. equal is the 'assign' function
+
+# # Say hello to user
+# print("hello,", name) 
+
+
+# # Strings (str)
+# name = input("What's your name? ") 
+
+# # Say hello to user
+# print("hello,", end="") # this eliminates the default of hello being in one line and the name on the second line in the output
+# print(name)
+
+
+# # Goal code:
+# name = input("What's your name? ") 
+
+# # Say hello to user
+# print(f"hello, {name}") 
+
+
+# # Strings, adding more funcitons
+# name = input("What's your name? ") 
+
+# # Remove white space from string and Capitalize user's name and lastname
+# name = name.strip()
+
+# # Capitalize user's name and lastname
+# name = name.title()
+
+# # Say hello to user
+# print(f"hello, {name}") 
+
+
+# # Same code above but condensed!
+# name = input("What's your name? ").strip().title()
+
+# # Say hello to user
+# print(f"hello, {name}") 
+
+
+# # Splitting lastname
+# name = input("What's your name? ").strip().title()
+
+# # Split user's name into first and last name
+# first, last = name.split(" ")
+
+# # Say hello to user
+# print(f"hello, {first}") 
