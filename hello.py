@@ -1,31 +1,21 @@
-# # Defining variables
-# def hello(to):
-#     print("hello,", to)
+# def main():
+#     name = input("What's your name? ")
+#     hello(name)
 
-# # Ask user for their name
-# name = input("What's your name? ")
-
-# hello(name)
-
-
-# # Can assign defaults
 # def hello(to="world"):
 #     print("hello,", to)
 
-# hello()
-# # Ask user for their name
-# name = input("What's your name? ")
-
-# hello(name)
+# if __name__ == "__main__":
+#     main()
 
 
-# How to properly code so that you do not need to keep adding more code above, instead of below
+## Editing code to have a return value, and more testable code
 def main():
     name = input("What's your name? ")
-    hello(name)
+    print(hello(name))
 
 def hello(to="world"):
-    print("hello,", to)
+    return f"hello, {to}"
 
-main()
-
+if __name__ == "__main__":
+    main()
